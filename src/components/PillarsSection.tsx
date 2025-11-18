@@ -55,7 +55,7 @@ export const PillarsSection = () => {
               </div>
               
               <h3 className="text-xl font-bold mb-4 text-foreground">
-                Pilar {index + 1} — {pillar.title}
+                {pillar.title}
               </h3>
               
               <ul className="space-y-3">
