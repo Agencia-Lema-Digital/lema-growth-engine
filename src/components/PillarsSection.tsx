@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import iconAds from "@/assets/icon-ads.jpg";
-import iconContent from "@/assets/icon-content.jpg";
-import iconSales from "@/assets/icon-sales.jpg";
+import iconAds from "@/assets/icon-ads-realistic.jpg";
+import iconContent from "@/assets/icon-content-realistic.jpg";
+import iconSales from "@/assets/icon-sales-realistic.jpg";
 
 export const PillarsSection = () => {
   const pillars = [

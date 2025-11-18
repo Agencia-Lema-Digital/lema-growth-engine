@@ -1,18 +1,23 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-strategy.jpg";
-import logo from "@/assets/logo-lema.png";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-secondary to-primary">
-      <div className="absolute inset-0 opacity-20">
-        <img src={heroImage} alt="Estratégia de crescimento" className="w-full h-full object-cover" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Vimeo Video Background */}
+      <div className="absolute inset-0">
+        <iframe
+          src="https://player.vimeo.com/video/937838325?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+          className="w-full h-full object-cover"
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+        />
       </div>
       
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <div className="flex justify-center mb-8 animate-fade-in">
-          <img src={logo} alt="Lema Digital" className="h-16 md:h-20" />
-        </div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-primary/80" />
+      
+      <div className="relative z-10 container mx-auto px-4 py-20 text-center mt-20">
         
         <div className="inline-block mb-6 px-4 py-2 bg-background/10 backdrop-blur-sm rounded-full border border-background/20 animate-fade-in">
           <p className="text-background text-sm font-medium">Assessoria de Marketing e Vendas</p>
