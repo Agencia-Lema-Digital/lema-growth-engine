@@ -4,11 +4,21 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Vimeo Video Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <iframe
           src="https://player.vimeo.com/video/937838325?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          className="w-full h-full object-cover"
-          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+          className="absolute top-0 left-0 w-full h-full border-0"
+          style={{ 
+            position: 'absolute', 
+            top: '50%', 
+            left: '50%', 
+            width: '100vw', 
+            height: '100vh',
+            minWidth: '100%',
+            minHeight: '100%',
+            transform: 'translate(-50%, -50%)',
+            objectFit: 'cover'
+          }}
           frameBorder="0"
           allow="autoplay; fullscreen"
         />
