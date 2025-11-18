@@ -16,7 +16,7 @@ export const HeroSection = () => {
             height: '56.25vw',
             minWidth: '100%',
             minHeight: '100%',
-            transform: 'translate(-50%, -50%) scale(5.0)',
+            transform: 'translate(-50%, -50%) scale(3.0)',
           }}
           frameBorder="0"
           allow="autoplay; fullscreen"
