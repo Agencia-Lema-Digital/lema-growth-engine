@@ -10,8 +10,8 @@ export const HeroSection = () => {
           className="absolute top-0 left-0 w-full h-full border-0"
           style={{ 
             position: 'absolute', 
-            top: '50%', 
-            left: '50%', 
+            top: '100%', 
+            left: '100%', 
             width: '100vw', 
             height: '100vh',
             minWidth: '100%',
