@@ -1,0 +1,83 @@
+import { Button } from "@/components/ui/button";
+import iconAds from "@/assets/icon-ads.jpg";
+import iconContent from "@/assets/icon-content.jpg";
+import iconSales from "@/assets/icon-sales.jpg";
+
+export const PillarsSection = () => {
+  const pillars = [
+    {
+      title: "Anúncios Online (Tráfego Pago)",
+      icon: iconAds,
+      items: [
+        "Campanhas inteligentes",
+        "Estratégias orientadas por dados",
+        "Geração de oportunidades reais (não só cliques)"
+      ]
+    },
+    {
+      title: "Atração Orgânica (Conteúdo Estratégico)",
+      icon: iconContent,
+      items: [
+        "Fortalecimento de autoridade",
+        "Posicionamento profissional",
+        "Relacionamento constante com o público"
+      ]
+    },
+    {
+      title: "Vendas (Estrutura Comercial)",
+      icon: iconSales,
+      items: [
+        "Processos claros e reproduzíveis",
+        "Scripts e follow-up inteligente",
+        "Funil de vendas organizado"
+      ]
+    }
+  ];
+
+  return (
+    <section className="py-20 md:py-32 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
+            O nosso método integra o que<br />
+            <span className="text-gradient">outras agências separam.</span>
+          </h2>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          {pillars.map((pillar, index) => (
+            <div 
+              key={index}
+              className="bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+            >
+              <div className="mb-6 rounded-xl overflow-hidden">
+                <img src={pillar.icon} alt={pillar.title} className="w-full h-48 object-cover" />
+              </div>
+              
+              <h3 className="text-xl font-bold mb-4 text-foreground">
+                Pilar {index + 1} — {pillar.title}
+              </h3>
+              
+              <ul className="space-y-3">
+                {pillar.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        
+        <div className="text-center">
+          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6">
+              👉 Quero uma estratégia personalizada para minha empresa
+            </Button>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
