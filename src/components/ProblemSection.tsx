@@ -38,8 +38,8 @@ export const ProblemSection = () => {
             ))}
           </div>
           
-          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto px-4">
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full whitespace-normal h-auto px-4 md:px-8 py-4 text-sm md:text-base">
               → Quero entender como melhorar meus resultados
             </Button>
           </a>
