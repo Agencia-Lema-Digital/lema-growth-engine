@@ -2,8 +2,39 @@ import { Button } from "@/components/ui/button";
 import iconAds from "@/assets/icon-ads-realistic.jpg";
 import iconContent from "@/assets/icon-content-realistic.jpg";
 import iconSales from "@/assets/icon-sales-realistic.jpg";
+import { useEffect, useRef, useState } from "react";
 
 export const PillarsSection = () => {
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = cardRefs.current.map((card, index) => {
+      if (!card) return null;
+      
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleCards((prev) => {
+                const newState = [...prev];
+                newState[index] = true;
+                return newState;
+              });
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      
+      observer.observe(card);
+      return observer;
+    });
+
+    return () => {
+      observers.forEach((observer) => observer?.disconnect());
+    };
+  }, []);
   const pillars = [
     {
       title: "Anúncios Online (Tráfego Pago)",
@@ -48,7 +79,13 @@ export const PillarsSection = () => {
           {pillars.map((pillar, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-xl"
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 shadow-lg hover:shadow-xl ${
+                visibleCards[index]
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="mb-6 rounded-xl overflow-hidden">
                 <img src={pillar.icon} alt={pillar.title} className="w-full h-48 object-cover" />
