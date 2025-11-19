@@ -41,8 +41,8 @@ export const HeroSection = () => {
           sistemas de crescimento personalizados, autorais e sustentáveis para o seu negócio.
         </p>
         
-        <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer">
-          <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in">
+        <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto">
+          <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-semibold px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in w-full whitespace-normal h-auto">
             👉 Quero agendar minha sessão estratégica
           </Button>
         </a>

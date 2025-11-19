@@ -108,8 +108,8 @@ export const PillarsSection = () => {
         </div>
         
         <div className="text-center">
-          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6">
+          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto px-4">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 md:px-8 py-4 md:py-6 w-full whitespace-normal h-auto text-sm md:text-base">
               👉 Quero uma estratégia personalizada para minha empresa
             </Button>
           </a>

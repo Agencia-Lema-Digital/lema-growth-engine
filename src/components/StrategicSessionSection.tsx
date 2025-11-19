@@ -38,8 +38,8 @@ export const StrategicSessionSection = () => {
             </div>
           </div>
           
-          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-bold px-10 py-7 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 animate-pulse">
+          <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto">
+            <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-bold px-4 md:px-10 py-4 md:py-7 text-base md:text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-2 animate-pulse w-full whitespace-normal h-auto">
               👉 Quero agendar minha sessão estratégica gratuita
             </Button>
           </a>
