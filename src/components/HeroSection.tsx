@@ -1,26 +1,18 @@
 import { Button } from "@/components/ui/button";
-
 export const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Vimeo Video Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <iframe
-          src="https://player.vimeo.com/video/937838325?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          className="absolute"
-          style={{ 
-            position: 'absolute', 
-            top: '50%', 
-            left: '50%', 
-            width: '177.77777778vh',
-            height: '56.25vw',
-            minWidth: '100%',
-            minHeight: '100%',
-            transform: 'translate(-50%, -50%) scale(3.0)',
-          }}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-        />
+        <iframe src="https://player.vimeo.com/video/937838325?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" className="absolute" style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        width: '177.77777778vh',
+        height: '56.25vw',
+        minWidth: '100%',
+        minHeight: '100%',
+        transform: 'translate(-50%, -50%) scale(3.0)'
+      }} frameBorder="0" allow="autoplay; fullscreen" />
       </div>
       
       {/* Gradient Overlay */}
@@ -42,13 +34,12 @@ export const HeroSection = () => {
         </p>
         
         <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto">
-          <Button size="lg" className="bg-background text-primary hover:bg-background/90 font-semibold px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in w-full whitespace-normal h-auto">
+          <Button size="lg" className="font-semibold px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in w-full whitespace-normal h-auto text-[#6a48f4] bg-neutral-200 hover:bg-neutral-100">
             👉 Quero agendar minha sessão estratégica
           </Button>
         </a>
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 };
