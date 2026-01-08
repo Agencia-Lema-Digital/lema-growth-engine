@@ -21,7 +21,7 @@ export const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 py-20 text-center mt-20">
         
         <div className="inline-block mb-6 px-4 py-2 bg-background/10 backdrop-blur-sm rounded-full border border-background/20 animate-fade-in">
-          <p className="text-background text-sm font-medium">Assessoria de Marketing e Vendas</p>
+          <p className="text-background text-sm font-medium">Assessoria de Marketing e Vendas </p>
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-background mb-6 animate-fade-in leading-tight">
