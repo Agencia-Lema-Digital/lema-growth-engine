@@ -38,7 +38,7 @@ export const ICPSection = () => {
                   stopOnMouseEnter: true,
                 }),
               ]}
-              className="w-full"
+              className="w-full h-full flex items-center"
             >
               <CarouselContent>
                 {icpList.map((item, index) => (
