@@ -23,11 +23,33 @@ export const TestimonialsSection = () => {
   return (
     <section className="py-20 md:py-32 bg-gradient-to-br from-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Nossos resultados<br />
             <span className="text-gradient">falam por nós.</span>
           </h2>
+        </div>
+        
+        {/* Video Testimonials */}
+        <div className="flex flex-col md:flex-row justify-center gap-6 mb-16 max-w-4xl mx-auto">
+          <div className="flex-1 aspect-[9/16] max-w-[280px] mx-auto rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/G1ZcB1HeC80?autoplay=1&mute=1&loop=1&playlist=G1ZcB1HeC80"
+              title="Depoimento 1"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div className="flex-1 aspect-[9/16] max-w-[280px] mx-auto rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/Nb7Ofl1Pedo?autoplay=0&mute=1&loop=1&playlist=Nb7Ofl1Pedo"
+              title="Depoimento 2"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
