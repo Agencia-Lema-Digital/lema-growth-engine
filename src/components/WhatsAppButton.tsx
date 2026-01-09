@@ -52,26 +52,27 @@ export const WhatsAppButton = () => {
     setIsLoading(true);
 
     try {
+      const formBody = new URLSearchParams();
+      formBody.append("name", formData.name);
+      formBody.append("email", formData.email);
+      formBody.append("phone", formData.phone);
+      formBody.append("utm_source", utmParams.utm_source);
+      formBody.append("utm_medium", utmParams.utm_medium);
+      formBody.append("utm_campaign", utmParams.utm_campaign);
+      formBody.append("utm_content", utmParams.utm_content);
+      formBody.append("utm_term", utmParams.utm_term);
+      formBody.append("gclid", utmParams.gclid);
+      formBody.append("fbclid", utmParams.fbclid);
+      formBody.append("timestamp", new Date().toISOString());
+      formBody.append("page_url", window.location.href);
+
       await fetch("https://hook.us1.make.com/47cmc7f2llqa4jxay1e8g2jhuj4u5lny", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
         mode: "no-cors",
-        body: JSON.stringify({
-          name: String(formData.name),
-          email: String(formData.email),
-          phone: String(formData.phone),
-          utm_source: String(utmParams.utm_source),
-          utm_medium: String(utmParams.utm_medium),
-          utm_campaign: String(utmParams.utm_campaign),
-          utm_content: String(utmParams.utm_content),
-          utm_term: String(utmParams.utm_term),
-          gclid: String(utmParams.gclid),
-          fbclid: String(utmParams.fbclid),
-          timestamp: String(new Date().toISOString()),
-          page_url: String(window.location.href),
-        }),
+        body: formBody.toString(),
       });
 
       window.location.href = "https://wa.me/message/DN2Y3BSNCVDDP1";
