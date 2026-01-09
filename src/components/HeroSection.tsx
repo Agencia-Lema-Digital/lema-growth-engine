@@ -21,7 +21,7 @@ export const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 py-20 text-center mt-20">
         
         <div className="inline-block mb-6 px-4 py-2 bg-background/10 backdrop-blur-sm rounded-full border border-background/20 animate-fade-in">
-          <p className="text-background text-sm font-medium">Assessoria de Marketing e Vendas </p>
+          <p className="text-background text-sm font-medium">Assessoria de Marketing e Vendas para a sua empresa </p>
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-background mb-6 animate-fade-in leading-tight">
@@ -35,7 +35,7 @@ export const HeroSection = () => {
         
         <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto">
           <Button size="lg" className="font-semibold px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in w-full whitespace-normal h-auto text-[#6a48f4] bg-neutral-200 hover:bg-neutral-100">
-            👉 Quero agendar minha sessão estratégica
+            👉 Quero agendar minha sessão estratégica         
           </Button>
         </a>
       </div>
