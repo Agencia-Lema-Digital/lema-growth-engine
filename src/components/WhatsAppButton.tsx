@@ -59,10 +59,18 @@ export const WhatsAppButton = () => {
         },
         mode: "no-cors",
         body: JSON.stringify({
-          ...formData,
-          ...utmParams,
-          timestamp: new Date().toISOString(),
-          page_url: window.location.href,
+          name: String(formData.name),
+          email: String(formData.email),
+          phone: String(formData.phone),
+          utm_source: String(utmParams.utm_source),
+          utm_medium: String(utmParams.utm_medium),
+          utm_campaign: String(utmParams.utm_campaign),
+          utm_content: String(utmParams.utm_content),
+          utm_term: String(utmParams.utm_term),
+          gclid: String(utmParams.gclid),
+          fbclid: String(utmParams.fbclid),
+          timestamp: String(new Date().toISOString()),
+          page_url: String(window.location.href),
         }),
       });
 
