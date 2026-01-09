@@ -65,6 +65,7 @@ export const WhatsAppButton = () => {
       formBody.append("fbclid", utmParams.fbclid);
       formBody.append("timestamp", new Date().toISOString());
       formBody.append("page_url", window.location.href);
+      formBody.append("lead_source", "whatsapp_button");
 
       await fetch("https://hook.us1.make.com/47cmc7f2llqa4jxay1e8g2jhuj4u5lny", {
         method: "POST",
