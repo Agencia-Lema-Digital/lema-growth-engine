@@ -33,7 +33,7 @@ export const HeroSection = () => {
           sistemas de crescimento personalizados, autorais e sustentáveis para o seu negócio.
         </p>
         
-        <a href="https://form.respondi.app/Q8JFntIQ" target="_blank" rel="noopener noreferrer" className="block w-full max-w-xl mx-auto">
+        <a href="https://form.respondi.app/Q8JFntIQ" className="block w-full max-w-xl mx-auto">
           <Button size="lg" className="font-semibold px-4 md:px-8 py-4 md:py-6 text-sm md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in w-full whitespace-normal h-auto text-[#6a48f4] bg-neutral-200 hover:bg-neutral-100">
             👉 Quero agendar minha sessão estratégica         
           </Button>
